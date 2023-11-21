@@ -63,24 +63,24 @@ func createOrasContainer(ctx context.Context, regIP string, bundlePath string) t
 	return orasC
 }
 
-func createTrivyContainer(ctx context.Context, regIP string) testcontainers.Container {
-	reqTrivy := testcontainers.ContainerRequest{
-		Image: "aquasec/trivy:latest",
+func createTunnelContainer(ctx context.Context, regIP string) testcontainers.Container {
+	reqTunnel := testcontainers.ContainerRequest{
+		Image: "khulnasoft/tunnel:latest",
 		Cmd:   []string{"--debug", "config", fmt.Sprintf("--policy-bundle-repository=%s:5111/defsec-test:latest", regIP), "."},
 		HostConfigModifier: func(config *container.HostConfig) {
 			config.NetworkMode = "host"
 		},
 		WaitingFor: wait.ForLog("Policies successfully loaded from disk"),
 	}
-	trivyC, err := testcontainers.GenericContainer(ctx, testcontainers.GenericContainerRequest{
-		ContainerRequest: reqTrivy,
+	tunnelC, err := testcontainers.GenericContainer(ctx, testcontainers.GenericContainerRequest{
+		ContainerRequest: reqTunnel,
 		Started:          true,
 	})
 	if err != nil {
 		panic(err)
 	}
 
-	return trivyC
+	return tunnelC
 }
 
 func debugLogsForContainer(ctx context.Context, c testcontainers.Container) string {
@@ -115,9 +115,9 @@ func LoadBundle() {
 		}
 	}()
 
-	trivyC := createTrivyContainer(ctx, regIP)
+	tunnelC := createTunnelContainer(ctx, regIP)
 	defer func() {
-		if err = trivyC.Terminate(ctx); err != nil {
+		if err = tunnelC.Terminate(ctx); err != nil {
 			panic(err)
 		}
 	}()
@@ -125,7 +125,7 @@ func LoadBundle() {
 	// for debugging
 	fmt.Println(debugLogsForContainer(ctx, regC))
 	fmt.Println(debugLogsForContainer(ctx, orasC))
-	fmt.Println(debugLogsForContainer(ctx, trivyC))
+	fmt.Println(debugLogsForContainer(ctx, tunnelC))
 }
 
 func main() {

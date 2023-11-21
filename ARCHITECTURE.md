@@ -6,7 +6,7 @@ This document aims to answer the question *Where is the code that does X?*
 
 The directory structure is broken down as follows:
 
-- `cmd/` - These CLI tools are primarily used during development for end-to-end testing without needing to pull the library into trivy/tfsec etc.
+- `cmd/` - These CLI tools are primarily used during development for end-to-end testing without needing to pull the library into tunnel/tfsec etc.
 - `rules` - All of the rules and policies are defined in this directory.
 - `pkg/spec` - Logic to handle standardized specs such as CIS.
 - `pkg/rules` - This package exposes internal rules, and imports them accordingly (see _rules.go_).

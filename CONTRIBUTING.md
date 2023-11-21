@@ -2,7 +2,7 @@
 
 Welcome, and thank you for considering contributing to tunnel-policies!
 
-The following guide gives an overview of the project and some directions on how to make common types of contribution. If something is missing, or you get stuck, please [start a discussion](https://github.com/aquasecurity/trivy/discussions/new) and we'll do our best to help.
+The following guide gives an overview of the project and some directions on how to make common types of contribution. If something is missing, or you get stuck, please [start a discussion](https://github.com/khulnasoft/tunnel/discussions/new) and we'll do our best to help.
 
 ### Writing Rules
 
@@ -62,9 +62,9 @@ Let's break the metadata down.
 - `title` is fairly self-explanatory - it is a title for the rule. The title should clearly and succinctly state the problem which is being detected.
 - `description` is also fairly self-explanatory - it is a description of the problem which is being detected. The description should be a little more verbose than the title, and should describe what the rule is trying to achieve. Imagine it completing a sentence starting with `You should...`.
 - `scope` is used to define the scope of the policy. In this case, we are defining a policy that applies to the entire package. _defsec_ only supports using package scope for metadata at the moment, so this should always be the same.
-- `schemas` tells Rego that it should use the `AWS` schema to validate the use of the input data in the policy. We currently support [these](https://github.com/aquasecurity/trivy-iac/tree/00033a7bd2a98bb07fb1c2cfa17a4cd85c6e0676/pkg/rego/schemas) schemas. Using a schema can help you validate your policy faster for syntax issues.
+- `schemas` tells Rego that it should use the `AWS` schema to validate the use of the input data in the policy. We currently support [these](https://github.com/khulnasoft/tunnel-iac/tree/00033a7bd2a98bb07fb1c2cfa17a4cd85c6e0676/pkg/rego/schemas) schemas. Using a schema can help you validate your policy faster for syntax issues.
 - `custom` is used to define custom fields that can be used by defsec to provide additional context to the policy and any related detections. This can contain the following:
-    - `avd_id` is the ID of the rule in the [AWS Vulnerability Database](https://avd.aquasec.com/). This is used to link the rule to the AVD entry. You can generate an ID to use for this field using `make id`.
+    - `avd_id` is the ID of the rule in the [AWS Vulnerability Database](https://avd.khulnasoft.com/). This is used to link the rule to the AVD entry. You can generate an ID to use for this field using `make id`.
     - `provider` is the name of the provider the rule targets. This should be the same as the provider name in the `pkg/providers` directory, e.g. `aws`.
     - `service` is the name of the service the rule targets. This should be the same as the service name in the `pkg/providers` directory, e.g. `rds`.
     - `severity` is the severity of the rule. This should be one of `LOW`, `MEDIUM`, `HIGH`, or `CRITICAL`.
@@ -90,6 +90,6 @@ In the example above, you'll notice properties are being accessed from the `inpu
 
 You should also write a test for your rule(s). There are many examples of these in the `rules/cloud/policies` directory.
 
-Finally, you'll want to generate documentation for your newly added rule. Please run `make docs` to within the [trivy-iac](https://github.com/aquasecurity/trivy-iac) repo generate the documentation for your new policy and submit a PR for us to take a look at.
+Finally, you'll want to generate documentation for your newly added rule. Please run `make docs` to within the [tunnel-iac](https://github.com/khulnasoft/tunnel-iac) repo generate the documentation for your new policy and submit a PR for us to take a look at.
 
 You can see a full example PR for a new rule being added here: [https://github.com/aquasecurity/defsec/pull/1000](https://github.com/aquasecurity/defsec/pull/1000).

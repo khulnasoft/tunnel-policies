@@ -4,8 +4,8 @@ go 1.20
 
 require (
 	github.com/aquasecurity/defsec v0.93.2-0.20231117234854-a13ada52a90f
-	github.com/aquasecurity/trivy-iac v0.5.2
 	github.com/docker/docker v24.0.7+incompatible
+	github.com/khulnasoft/tunnel-iac v0.0.0-20231121225723-c964bf3544b3
 	github.com/liamg/iamgo v0.0.9
 	github.com/liamg/memoryfs v1.6.0
 	github.com/owenrumney/squealer v1.2.1
@@ -27,7 +27,6 @@ require (
 	github.com/alecthomas/chroma v0.10.0 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
-	github.com/aquasecurity/trivy-policies v0.3.1-0.20231021040354-0572a07131c2 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect

@@ -28,10 +28,6 @@ github.com/apparentlymart/go-textseg/v15 v15.0.0 h1:uYvfpb3DyLSCGWnctWKGj857c6ew
 github.com/apparentlymart/go-textseg/v15 v15.0.0/go.mod h1:K8XmNZdhEBkdlyDdvbmmsvpAG721bKi0joRfFdHIWJ4=
 github.com/aquasecurity/defsec v0.93.2-0.20231117234854-a13ada52a90f h1:cO9S78J2eBx9tEIZYwFoousuYWV4DtgQlGsZUusMyNY=
 github.com/aquasecurity/defsec v0.93.2-0.20231117234854-a13ada52a90f/go.mod h1:J30VViSgmoW2Ic/6aqVJO2qvuADsmZ3MYuNxPcU6Vt0=
-github.com/aquasecurity/trivy-iac v0.5.2 h1:cqeSDEfQtM3l4ceiQ+IUD2K/ZBhyz443xe+S2TkBdE0=
-github.com/aquasecurity/trivy-iac v0.5.2/go.mod h1:dHoaIzm4niotuaEiSM40HelhcL8m/2MHzT3uHcQYUh8=
-github.com/aquasecurity/trivy-policies v0.3.1-0.20231021040354-0572a07131c2 h1:Xkm2i9Dy98p/DMR0smfog487zaTJ11hLVL+PvIgVWyM=
-github.com/aquasecurity/trivy-policies v0.3.1-0.20231021040354-0572a07131c2/go.mod h1:Wqj81EIp4lDQGVzbPalKLNucR7c96YLQbfdA60KpEkQ=
 github.com/arbovm/levenshtein v0.0.0-20160628152529-48b4e1c0c4d0 h1:jfIu9sQUG6Ig+0+Ap1h4unLjW6YQJpKZVmUzxsD4E/Q=
 github.com/arbovm/levenshtein v0.0.0-20160628152529-48b4e1c0c4d0/go.mod h1:t2tdKJDJF9BV14lnkjHmOQgcvEKgtqs5a1N3LNdJhGE=
 github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5 h1:0CwZNZbxp69SHPdPJAN/hZIm0C4OItdklCFmMRWYpio=
@@ -135,6 +131,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/kevinburke/ssh_config v1.2.0 h1:x584FjTGwHzMwvHx18PXxbBVzfnxogHaAReU4gf13a4=
 github.com/kevinburke/ssh_config v1.2.0/go.mod h1:CT57kijsi8u/K/BOFA39wgDQJ9CxiF4nAY/ojJ6r6mM=
+github.com/khulnasoft/tunnel-iac v0.0.0-20231121225723-c964bf3544b3 h1:HJTp6EZPvpEkkNQHMyz5Bpq+emiHTLwKKraqi6WWbPU=
+github.com/khulnasoft/tunnel-iac v0.0.0-20231121225723-c964bf3544b3/go.mod h1:KxNEnPooPVqtkGuWxbTbTCo8Yv6sUlCCX+XnrB0GX4Q=
 github.com/kisielk/errcheck v1.5.0/go.mod h1:pFxgyoBC7bSaBwPgfKdkLd5X25qrDl4LWUI2bnpBCr8=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/klauspost/compress v1.16.0 h1:iULayQNOReoYUe+1qtKOqw9CwJv3aNQu8ivo7lw1HU4=

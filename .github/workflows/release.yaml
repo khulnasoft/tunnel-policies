@@ -4,7 +4,7 @@ on:
     tags:
       - "v*"
 env:
-  GH_USER: aqua-bot
+  GH_USER: khulnasoft-bot
 jobs:
   build:
     runs-on: ubuntu-latest
