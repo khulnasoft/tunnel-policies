@@ -13,12 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.AUTO_COMMIT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Fetch outdated API data from tunnel-db-data repo
         id: outdatedapi
         uses: fjogeleit/http-request-action@v1
         with:
-          url: "https://raw.githubusercontent.com/khulnasoft/tunnel-db-data/main/k8s/api/k8s-outdated-api.json"
+          url: "https://raw.githubusercontent.com/khulnasoft-lab/tunnel-db-data/main/k8s/api/k8s-outdated-api.json"
           method: "GET"
       - name: embed outdatedapi-data with in dynamic rego policy
         env:
