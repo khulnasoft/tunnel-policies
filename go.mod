@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/aquasecurity/defsec v0.93.2-0.20231117234854-a13ada52a90f
 	github.com/docker/docker v24.0.7+incompatible
-	github.com/khulnasoft/tunnel-iac v0.0.0-20231121225723-c964bf3544b3
+	github.com/khulnasoft/tunnel-iac v0.0.1
 	github.com/liamg/iamgo v0.0.9
 	github.com/liamg/memoryfs v1.6.0
 	github.com/owenrumney/squealer v1.2.1
